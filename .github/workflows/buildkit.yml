@@ -367,7 +367,5 @@ jobs:
             --junitfile="./bin/testreports/junit-report-${{ env.TEST_REPORT_NAME }}.xml" \
             --packages="${{ env.TESTPKG }}" \
             -- \
-              "-mod=vendor" \
-              "-coverprofile" "./bin/testreports/coverage-${{ env.TEST_REPORT_NAME }}.txt" \
-              "-covermode" "atomic" ${{ env.TESTFLAGS }}
+              "-mod=vendor" ${{ env.TESTFLAGS }}
         working-directory: buildkit
